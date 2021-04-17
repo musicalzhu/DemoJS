@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <script src="vue.js"></script>
+</head>
+
+<body>
+
+  <div id="vue">
+    <button v-on:click="fn('v1')">
+      v1: {{v1}}
+    </button>
+
+    <button v-on:click="fn('v2')">
+      v2: {{v2}}
+    </button>
+  </div>
+
+  <script type='text/javascript'>
+
+    var vue = new Vue({
+      el: '#vue',
+      data: {
+        v1: 10,
+        v2: 3,
+      },
+      // 在 `methods` 对象中定义方法
+      methods: {
+        fn: function (x) {
+          //alert(x)
+          this[x]=this[x]+1
+        }
+      }
+    })
+  </script>
+
+
+</body>
+
+</html>
