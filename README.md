@@ -1,2 +1,2 @@
-# JS_Demo
+# DemoJS
 this is JS demo project
